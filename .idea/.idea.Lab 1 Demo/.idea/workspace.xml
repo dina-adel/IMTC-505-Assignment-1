@@ -6,9 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="32e48537-a47b-479c-a618-d3672b30bb0c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab 1 Demo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Lab 1 Demo/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Mover.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Mover.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +18,9 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/Mover.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="Toolset" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
@@ -90,7 +91,8 @@
       <workItem from="1726694793853" duration="6000" />
       <workItem from="1726699580463" duration="62000" />
       <workItem from="1726699663644" duration="2666000" />
-      <workItem from="1726702574259" duration="679000" />
+      <workItem from="1726702574259" duration="1402000" />
+      <workItem from="1727124276856" duration="2727000" />
     </task>
     <servers />
   </component>

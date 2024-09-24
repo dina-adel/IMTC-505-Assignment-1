@@ -7,15 +7,24 @@ public class Mover : MonoBehaviour
 {
     public GameObject trail;        // only this needs to be public
     private float speed;            // speed of the cube
-    private Renderer cubeRenderer;      // renderer to change cube color
+    private Renderer cubeRenderer;      // renderer to manipulate the cube on the screen
     private float trailTimer;           // timer for appearing trail
     private Vector3 movement;           // cube movement vector
+    
+    // add audio stuff :"D
+    public AudioClip soundEffect; // reference to the audio clip
+    private AudioSource audioSource; // reference to the audio source component
+    private bool isPlaying = false;
     
     void Start()
     {
         cubeRenderer = GetComponent<Renderer>();
         trailTimer = 0f; // start the trail timer
         speed = 0.5f;   // default speed of 0.5
+        
+        // get audio source from the cube object
+        audioSource = this.gameObject.AddComponent<AudioSource>();
+        audioSource.clip = soundEffect;
 
     }
 
@@ -35,7 +44,9 @@ public class Mover : MonoBehaviour
        if (trailTimer > 1f)  CreateDisappearingTrail(); 
        
        // if a space is clicked, change the color of the cube to a random color
-       if (Input.GetKeyDown(KeyCode.Space))  ChangeCubeColor();       
+       if (Input.GetKeyDown(KeyCode.Space))  ChangeCubeColor();    
+       
+       if (Input.GetKeyDown(KeyCode.P)) PlayAudio(isPlaying);
        
     }
     
@@ -78,7 +89,21 @@ public class Mover : MonoBehaviour
         if (cubeRenderer != null)
         {
             cubeRenderer.material.color = new Color(Random.value, Random.value, Random.value);
-         }
-     }
+        }
+    }
+    void PlayAudio(bool isPlaying=false)
+    {   /* Play the Audio source 
+        */
+        if (isPlaying)
+        {
+            audioSource.Stop();
+            this.isPlaying = false;
+        }
+        else
+        {
+            audioSource.Play();
+            this.isPlaying = true;
+        }
+    }
     
 }

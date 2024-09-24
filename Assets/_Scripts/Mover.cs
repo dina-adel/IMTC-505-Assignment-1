@@ -28,7 +28,6 @@ public class Mover : MonoBehaviour
 
     }
 
-    // Update is called once per frame
     void Update()
     {
        float moveHorizontal = Input.GetAxis("Horizontal"); // read A and D for left and right       

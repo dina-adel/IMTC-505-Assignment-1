@@ -139,9 +139,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0541ff352c6c59c4897265d082222eb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetPosition: {x: 0, y: 0, z: 0}
-  speed: 1
   trail: {fileID: 494779793707196335, guid: edb5b11112a351346bdda9f66d9b46e5, type: 3}
+  soundEffect: {fileID: 8300000, guid: 4010e81dbb53b9c49810bfca7ed26a28, type: 3}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -391,6 +390,10 @@ PrefabInstance:
     - target: {fileID: 6783226623064254808, guid: edb5b11112a351346bdda9f66d9b46e5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7856040157264534391, guid: edb5b11112a351346bdda9f66d9b46e5, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -14,7 +14,7 @@ public class Mover : MonoBehaviour
     // add audio stuff :"D
     public AudioClip soundEffect; // reference to the audio clip
     private AudioSource audioSource; // reference to the audio source component
-    private bool isPlaying = false;
+    private bool isPlaying = false;     // to keep track whether the audio is playing or not
     
     void Start()
     {
@@ -46,6 +46,7 @@ public class Mover : MonoBehaviour
        // if a space is clicked, change the color of the cube to a random color
        if (Input.GetKeyDown(KeyCode.Space))  ChangeCubeColor();    
        
+       // if "P" is pressed, play/pause the audio
        if (Input.GetKeyDown(KeyCode.P)) PlayAudio(isPlaying);
        
     }
@@ -93,14 +94,16 @@ public class Mover : MonoBehaviour
     }
     void PlayAudio(bool isPlaying=false)
     {   /* Play the Audio source 
+           inputs:
+              * isPlaying (bool): whether the audio is playing or not. 
         */
         if (isPlaying)
-        {
+        {   // if playing -> pause
             audioSource.Stop();
             this.isPlaying = false;
         }
         else
-        {
+        {   // play audio
             audioSource.Play();
             this.isPlaying = true;
         }
